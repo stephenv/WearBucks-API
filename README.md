@@ -12,16 +12,21 @@ API Endpoints
 
 Content-Type: application/json
 
+Example JSON body:
+```json
 {
   "username": "example@user.com",
   "password": "******"
 }
-
+```
 
 /locations
 Content-Type: application/json
 
+Example JSON body:
+```json
 {
   "latitude": 00.0000000,
   "longitude": -00.0000000
 }
+```
