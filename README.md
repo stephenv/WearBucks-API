@@ -6,17 +6,32 @@ API for "WearBucks (Pay for Starbucks)" application on Google Play (Android)
 
 HTTP RESTful API for retrieving Starbucks user information
 
+Dependencies
+** Slim PHP Microframework **
+** Google Analytics (optional) **
+** MongoDB (optional) **
+
 API Endpoints
-/account 
-/locations (In progress)
+**<code>POST</code> /account **
+**<code>POST</code> /locations (In progress) **
 
 Content-Type: application/json
 
 Example JSON body:
 ```json
 {
-  "username": "example@user.com",
+  "username": "user@domain.com",
   "password": "******"
+}
+```
+Response
+```json
+{
+  error: false
+  customer_name: "Firstname Lastname"
+  stars: "0"
+  rewards: "0"
+  dollar_balance: "00.00"
 }
 ```
 
