@@ -45,7 +45,7 @@ Response
 ```
 
 ## <code>POST</code> /locations
-**<code>Note:</code> This API endpoint is in progress and therefore the documentation is not complete. Analytics is also currently not applied**
+>**<code>Note:</code> This API endpoint is in progress and therefore the documentation is not complete. Analytics is also currently not applied**
 This feature  returns a list of nearby Starbucks locations stored in a MongoDB database (not included in API)
 set the following environment variables in index.php:
 ```php
