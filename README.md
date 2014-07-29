@@ -43,6 +43,15 @@ Response
 }
 ```
 
+## <code>POST</code> /locations
+**<code>Note:</code> This API endpoint is in progress and therefore the documentation is not complete. Analytics is also currently not applied**
+This feature  returns a list of nearby Starbucks locations stored in a MongoDB database (not included in API)
+set the following environment variables in index.php:
+```php
+$_ENV['LOCATIONS'] = true;
+$_ENV['MONGOHQ_URL'] = mongodb://user:pass@server.mongohq.com/db_name;
+```
+
 /locations
 Content-Type: application/json
 
@@ -56,3 +65,4 @@ Example JSON body:
 
 ## Google Analytics 
 Google analytics can be enabled and is tracked using "Measurement Protocol". Ensure "Universal Analytics" is enabled on the property and use the provided tracking ID "UA-XXXX-XX"
+
