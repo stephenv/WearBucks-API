@@ -8,13 +8,15 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
 - Slim PHP Microframework
 - Google Analytics **(optional for usage statistics)**
 - MongoDB **(optional for geolocation)** 
+- PHP
+- JSON
 
 
 ## API Endpoints
 - **<code>POST</code> /account**
 - **<code>POST</code> /locations (In progress)**
 
-## <code>POST</code> /account
+# <code>POST</code> /account
 > Retrieves Starbucks.com account details (given correct credentials) 
 
 ##### Parameters
@@ -48,6 +50,7 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
 ##### Response codes & Error Handling
 > The API will always return an HTTP status code 200 however there may be errors. In the JSON response body, "error" will not be false. Example:
 
+```json
 {
   "error":{
     "code": 401,
@@ -55,6 +58,7 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
     "description": "Authentication credentials were malformed or incorrect."
   }
 }
+```
 
 Error codes
 - <code>400</code> Bad Request - Likely that the request was not formatted correctly
