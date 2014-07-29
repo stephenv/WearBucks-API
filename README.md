@@ -5,7 +5,7 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
 
 **IMPORTANT: Login information (username and password) is not stored and the API should only be used over SSL/TSL** 
 
-#### Dependencies ####
+#### Dependencies: ####
 - Slim PHP Microframework
 - Google Analytics **(optional for usage statistics)**
 - MongoDB **(optional for geolocation)** 
@@ -18,7 +18,7 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
 ## <code>POST</code> /account
 > Retrieves Starbucks.com account details (given correct credentials) 
 
-#### Parameters ####
+#### Parameters
 | Name  | Description | Details |
 | ------------- | ------------- | ------------- |
 | username  | Starbucks username or password  | required |
@@ -26,14 +26,14 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
 
 Content-Type: application/json
 
-Example JSON body:
+#### Example JSON Request body:
 ```json
 {
   "username": "user@domain.com",
   "password": "******"
 }
 ```
-Response
+#### Example JSON Response body:
 ```json
 {
     "error": false,
