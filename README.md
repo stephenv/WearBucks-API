@@ -53,3 +53,6 @@ Example JSON body:
   "longitude": -00.0000000
 }
 ```
+
+## Google Analytics 
+Google analytics can be enabled and is tracked using "Measurement Protocol". Ensure "Universal Analytics" is enabled on the property and use the provided tracking ID "UA-XXXX-XX"
