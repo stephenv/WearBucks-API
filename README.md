@@ -8,7 +8,6 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
 - Slim PHP Microframework
 - Google Analytics **(optional for usage statistics)**
 - MongoDB **(optional for geolocation)** 
-- PHP
 - JSON
 
 #### API Endpoints
@@ -27,7 +26,8 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
 | Name  | Description | Details |
 | ------------- | ------------- | ------------- |
 | Content-Type  | application/json  | required |
-| password  | Starbucks password  | required |
+| cid  | Client UUID  | optional, used by Google Analytics |
+| av  | App Version Number  | optional, used by Google Analytics |
 
 ##### Example JSON Request body:
 ```json
