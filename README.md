@@ -26,14 +26,14 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
 
 Content-Type: application/json
 
-#### Example JSON Request body:
+##### Example JSON Request body:
 ```json
 {
   "username": "user@domain.com",
   "password": "******"
 }
 ```
-#### Example JSON Response body:
+##### Example JSON Response body:
 ```json
 {
     "error": false,
