@@ -17,13 +17,16 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
 ## <code>POST</code> /account
 > Retrieves Starbucks.com account details (given correct credentials) 
 
-#### Parameters
+##### Parameters
 | Name  | Description | Details |
 | ------------- | ------------- | ------------- |
 | username  | Starbucks username or password  | required |
+| password  | Starbucks password  | required | 
+##### Headers
+| Name  | Description | Details |
+| ------------- | ------------- | ------------- |
+| Content-Type  | application/json  | required |
 | password  | Starbucks password  | required |
-
-Content-Type: application/json
 
 ##### Example JSON Request body:
 ```json
@@ -42,9 +45,25 @@ Content-Type: application/json
     "dollar_balance": "00.00",
 }
 ```
+##### Response codes & Error Handling
+> The API will always return an HTTP status code 200 however there may be errors. In the JSON response body, "error" will not be false. Example:
+
+{
+  "error":{
+    "code": 401,
+    "message": "Unauthorized",
+    "description": "Authentication credentials were malformed or incorrect."
+  }
+}
+
+Error codes
+- <code>400</code> Bad Request - Likely that the request was not formatted correctly
+- <code>401</code> Unauthorized - Likely that the credentials were incorrect
+
+
 
 ## <code>POST</code> /locations
->**<code>Note:</code> This API endpoint is in progress and therefore the documentation is not complete. Analytics is also currently not applied**
+>**<code>Note:</code> This API endpoint is in progress and therefore the documentation is not complete. Analytics is also currently not supported**
 This feature  returns a list of nearby Starbucks locations stored in a MongoDB database (not included in API) 
 
 set the following environment variables in index.php: 
