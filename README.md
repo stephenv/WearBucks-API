@@ -15,6 +15,12 @@ API Endpoints
 **<code>POST</code> /account **
 **<code>POST</code> /locations (In progress) **
 
+
+| Name  | Description | Details |
+| ------------- | ------------- | ------------- |
+| username  | Starbucks username or password  | required |
+| password  | Starbucks password  | required |
+
 Content-Type: application/json
 
 Example JSON body:
@@ -27,11 +33,11 @@ Example JSON body:
 Response
 ```json
 {
-  error: false
-  customer_name: "Firstname Lastname"
-  stars: "0"
-  rewards: "0"
-  dollar_balance: "00.00"
+    "error": false,
+    "customer_name": "Firstname Lastname",
+    "stars": "0",
+    "rewards": "0",
+    "dollar_balance": "00.00",
 }
 ```
 
