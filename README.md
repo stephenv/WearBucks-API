@@ -12,8 +12,8 @@ Dependencies
 ** MongoDB (optional) **
 
 API Endpoints
-**<code>POST</code> /account **
-**<code>POST</code> /locations (In progress) **
+- **<code>POST</code> /account **
+- **<code>POST</code> /locations (In progress) **
 
 
 | Name  | Description | Details |
