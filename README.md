@@ -6,16 +6,16 @@ API for "WearBucks (Pay for Starbucks)" application on Google Play (Android)
 
 HTTP RESTful API for retrieving Starbucks user information
 
-Dependencies
-** Slim PHP Microframework **
-** Google Analytics (optional) **
-** MongoDB (optional) **
+## Dependencies
+- Slim PHP Microframework
+- Google Analytics **(optional)**
+- MongoDB **(optional)** 
 
-API Endpoints
+## API Endpoints
 - **<code>POST</code> /account**
 - **<code>POST</code> /locations (In progress)**
 
-### <code>POST</code> /account
+## <code>POST</code> /account
 
 | Name  | Description | Details |
 | ------------- | ------------- | ------------- |
