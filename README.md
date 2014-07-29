@@ -11,12 +11,11 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
 - PHP
 - JSON
 
-
-## API Endpoints
+#### API Endpoints
 - **<code>POST</code> /account**
 - **<code>POST</code> /locations (In progress)**
 
-# <code>POST</code> /account
+## <code>POST</code> /account
 > Retrieves Starbucks.com account details (given correct credentials) 
 
 ##### Parameters
