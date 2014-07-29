@@ -18,6 +18,8 @@ The API is based off [Starbucks class](https://github.com/Neal/php-starbucks) by
 - **<code>POST</code> /locations (In progress)**
 
 ## <code>POST</code> /account
+> Retrieves Starbucks.com account details (given correct credentials) 
+
 #### Parameters ####
 | Name  | Description | Details |
 | ------------- | ------------- | ------------- |
@@ -46,8 +48,9 @@ Response
 
 ## <code>POST</code> /locations
 >**<code>Note:</code> This API endpoint is in progress and therefore the documentation is not complete. Analytics is also currently not applied**
-This feature  returns a list of nearby Starbucks locations stored in a MongoDB database (not included in API)
-set the following environment variables in index.php:
+This feature  returns a list of nearby Starbucks locations stored in a MongoDB database (not included in API) 
+
+set the following environment variables in index.php: 
 ```php
 $_ENV['LOCATIONS'] = true;
 $_ENV['MONGOHQ_URL'] = mongodb://user:pass@server.mongohq.com/db_name;
