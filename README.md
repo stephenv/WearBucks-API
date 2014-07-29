@@ -29,14 +29,14 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
 | cid  | Client UUID  | optional, used by Google Analytics |
 | av  | App Version Number  | optional, used by Google Analytics |
 
-##### Example JSON Request body:
+Example JSON Request body:
 ```json
 {
   "username": "user@domain.com",
   "password": "******"
 }
 ```
-##### Example JSON Response body:
+Example JSON Response body:
 ```json
 {
     "error": false,
@@ -59,7 +59,7 @@ WearBucks API is a RESTful HTTP API for retrieving Starbucks user information. T
 }
 ```
 
-Error codes
+Error codes:
 - <code>400</code> Bad Request - Likely that the request was not formatted correctly
 - <code>401</code> Unauthorized - Likely that the credentials were incorrect
 
