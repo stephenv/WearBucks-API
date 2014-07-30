@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Wearbucks-api by stephenv</title>
+    <title>WearBucks API by stephenv</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -17,8 +17,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Wearbucks-api</h1>
-        <p>API for &quot;WearBucks (Pay for Starbucks)&quot; application on Google Play (Android)</p>
+        <h1>WearBucks API</h1>
+        <p>API for &quot;WearBucks (Pay for Starbucks)&quot; Android application</p>
         <p class="view"><a href="https://github.com/stephenv/WearBucks-API">View the Project on GitHub <small>stephenv/WearBucks-API</small></a></p>
         <ul>
           <li><a href="https://github.com/stephenv/WearBucks-API/zipball/master">Download <strong>ZIP File</strong></a></li>
@@ -27,37 +27,152 @@
         </ul>
       </header>
       <section>
-        <h3>
-<a name="welcome-to-github-pages2" class="anchor" href="#welcome-to-github-pages2"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages2.</h3>
+        <p>WearBucks API is an open-source RESTful HTTP API for retrieving Starbucks user information. This is the API used by <strong>WearBucks (Pay for Starbucks)</strong> Android application on Google Play. </p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>This API is based off <a href="https://github.com/Neal/php-starbucks">Starbucks class</a> by <a href="https://github.com/Neal">Neil</a>. </p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<p><em>Login information (username and password) is not stored and the API should only be used over SSL/TSL</em></p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h4>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies:</h4>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<ul>
+<li>Slim PHP Micro-framework</li>
+<li>Google Analytics <strong>(optional for usage statistics)</strong>
+</li>
+<li>MongoDB <strong>(optional for geolocation)</strong> </li>
+<li>Request body and response body use JSON</li>
+</ul><h4>
+<a name="api-endpoints" class="anchor" href="#api-endpoints"><span class="octicon octicon-link"></span></a>API Endpoints:</h4>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<ul>
+<li><strong><code>POST</code> /account</strong></li>
+<li><strong><code>POST</code> /locations (In progress)</strong></li>
+</ul><h4>
+<a name="installation-instructions" class="anchor" href="#installation-instructions"><span class="octicon octicon-link"></span></a>Installation instructions:</h4>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<ul>
+<li>Just deploy and modify the optional environment variables in "index.php" as necessary.</li>
+<li>Although the API is small, it was put together very quickly. It would be beneficial to look over the "Response codes &amp; Error Handling" section as the API will always return HTTP 200 even when there are errors. Again, the "/locations" endpoint is currently in development and is not active.</li>
+</ul><h2>
+<a name="post-account" class="anchor" href="#post-account"><span class="octicon octicon-link"></span></a>
+<code>POST</code> /account</h2>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<blockquote>
+<p>Retrieves Starbucks.com account details (given correct credentials) </p>
+</blockquote>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<h5>
+<a name="parameters" class="anchor" href="#parameters"><span class="octicon octicon-link"></span></a>Parameters</h5>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<table>
+<thead><tr>
+<th>Name</th>
+<th>Description</th>
+<th>Details</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>username</td>
+<td>Starbucks username or password</td>
+<td>required</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Starbucks password</td>
+<td>required</td>
+</tr>
+</tbody>
+</table><h5>
+<a name="headers" class="anchor" href="#headers"><span class="octicon octicon-link"></span></a>Headers</h5>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<table>
+<thead><tr>
+<th>Name</th>
+<th>Description</th>
+<th>Details</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+<td>required</td>
+</tr>
+<tr>
+<td>cid</td>
+<td>Client UUID</td>
+<td>optional, used by Google Analytics</td>
+</tr>
+<tr>
+<td>av</td>
+<td>App Version Number</td>
+<td>optional, used by Google Analytics</td>
+</tr>
+</tbody>
+</table><p>Example JSON Request body:</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<div class="highlight highlight-json"><pre><span class="p">{</span>
+  <span class="nt">"username"</span><span class="p">:</span> <span class="s2">"user@domain.com"</span><span class="p">,</span>
+  <span class="nt">"password"</span><span class="p">:</span> <span class="s2">"******"</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Example JSON Response body:</p>
+
+<div class="highlight highlight-json"><pre><span class="p">{</span>
+    <span class="nt">"error"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">"customer_name"</span><span class="p">:</span> <span class="s2">"Firstname Lastname"</span><span class="p">,</span>
+    <span class="nt">"stars"</span><span class="p">:</span> <span class="s2">"0"</span><span class="p">,</span>
+    <span class="nt">"rewards"</span><span class="p">:</span> <span class="s2">"0"</span><span class="p">,</span>
+    <span class="nt">"dollar_balance"</span><span class="p">:</span> <span class="s2">"00.00"</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+<h5>
+<a name="response-codes--error-handling" class="anchor" href="#response-codes--error-handling"><span class="octicon octicon-link"></span></a>Response codes &amp; Error Handling</h5>
+
+<blockquote>
+<p>The API will always return an HTTP status code 200 however there may be errors. In the JSON response body, "error" will not be false. Example:</p>
+</blockquote>
+
+<div class="highlight highlight-json"><pre><span class="p">{</span>
+  <span class="nt">"error"</span><span class="p">:{</span>
+    <span class="nt">"code"</span><span class="p">:</span> <span class="mi">401</span><span class="p">,</span>
+    <span class="nt">"message"</span><span class="p">:</span> <span class="s2">"Unauthorized"</span><span class="p">,</span>
+    <span class="nt">"description"</span><span class="p">:</span> <span class="s2">"Authentication credentials were malformed or incorrect."</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Error codes:</p>
+
+<ul>
+<li>
+<code>400</code> Bad Request - Likely that the request was not formatted correctly</li>
+<li>
+<code>401</code> Unauthorized - Likely that the credentials were incorrect</li>
+</ul><h2>
+<a name="post-locations" class="anchor" href="#post-locations"><span class="octicon octicon-link"></span></a>
+<code>POST</code> /locations</h2>
+
+<blockquote>
+<p><strong>NOTE: This API endpoint is in progress and therefore the documentation is not complete. Analytics is also currently not supported</strong> This feature  returns a list of nearby Starbucks locations stored in a MongoDB database (not included in API). Set the following environment variables in index.php: </p>
+</blockquote>
+
+<div class="highlight highlight-php"><pre><span class="nv">$_ENV</span><span class="p">[</span><span class="s1">'LOCATIONS'</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="nv">$_ENV</span><span class="p">[</span><span class="s1">'MONGOHQ_URL'</span><span class="p">]</span> <span class="o">=</span> <span class="nx">mongodb</span><span class="o">://</span><span class="nx">user</span><span class="o">:</span><span class="nx">pass</span><span class="o">@</span><span class="nx">server</span><span class="o">.</span><span class="nx">mongohq</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">db_name</span><span class="p">;</span>
+</pre></div>
+
+<h2>
+<a name="google-analytics" class="anchor" href="#google-analytics"><span class="octicon octicon-link"></span></a>Google Analytics</h2>
+
+<blockquote>
+<p>Google analytics can be enabled and is tracked using "Measurement Protocol". Ensure "Universal Analytics" is enabled on the property and use the provided tracking ID "UA-XXXX-XX".Set the following environment variables in index.php: </p>
+</blockquote>
+
+<div class="highlight highlight-php"><pre><span class="nv">$_ENV</span><span class="p">[</span><span class="s1">'ANALYTICS'</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="nv">$_ENV</span><span class="p">[</span><span class="s1">'TRACKING_ID'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"UA-XXXXXXXX-X"</span><span class="p">;</span>
+</pre></div>
       </section>
     </div>
     <footer>
