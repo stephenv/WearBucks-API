@@ -8,7 +8,7 @@ WearBucks API is an open-source RESTful HTTP API for retrieving Starbucks user i
 - Slim PHP Microframework
 - Google Analytics **(optional for usage statistics)**
 - MongoDB **(optional for geolocation)** 
-- JSON
+- Request body and Response body use JSON
 
 #### API Endpoints:
 - **<code>POST</code> /account**
