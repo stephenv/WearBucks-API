@@ -15,7 +15,8 @@ WearBucks API is an open-source RESTful HTTP API for retrieving Starbucks user i
 - **<code>POST</code> /locations (In progress)**
 
 #### Installation instructions:
-Although the API is small, it was put together very quickly. I would recommend quickly looking over the "Response codes & Error Handling" section as the API will always return HTTP 200 even when there are errors. Other than that, just deploy and modify the optional environment variables in "index.php". Again, the "/locations" endpoint is currently in development and is not active.
+- Just deploy and modify the optional environment variables in "index.php" as necessary.
+- Although the API is small, it was put together very quickly. It would be beneficial to look over the "Response codes & Error Handling" section as the API will always return HTTP 200 even when there are errors. Again, the "/locations" endpoint is currently in development and is not active.
 
 ## <code>POST</code> /account
 > Retrieves Starbucks.com account details (given correct credentials) 
