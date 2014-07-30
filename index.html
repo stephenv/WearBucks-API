@@ -54,16 +54,17 @@
 <ul>
 <li>Just deploy and modify the optional environment variables in "index.php" as necessary.</li>
 <li>Although the API is small, it was put together very quickly. It would be beneficial to look over the "Response codes &amp; Error Handling" section as the API will always return HTTP 200 even when there are errors. Again, the "/locations" endpoint is currently in development and is not active.</li>
-</ul><h2>
-<a name="post-account" class="anchor" href="#post-account"><span class="octicon octicon-link"></span></a>
-<code>POST</code> /account</h2>
+</ul>
+<br />
+<h2>
+<a name="post-account" class="anchor" href="#post-account"><span class="octicon octicon-link"></span></a>POST /account</h2>
 
 <blockquote>
 <p>Retrieves Starbucks.com account details (given correct credentials) </p>
 </blockquote>
 
-<h5>
-<a name="parameters" class="anchor" href="#parameters"><span class="octicon octicon-link"></span></a>Parameters</h5>
+<h4>
+<a name="parameters" class="anchor" href="#parameters"><span class="octicon octicon-link"></span></a>Parameters:</h4>
 
 <table>
 <thead><tr>
@@ -83,8 +84,8 @@
 <td>required</td>
 </tr>
 </tbody>
-</table><h5>
-<a name="headers" class="anchor" href="#headers"><span class="octicon octicon-link"></span></a>Headers</h5>
+</table><h4>
+<a name="headers" class="anchor" href="#headers"><span class="octicon octicon-link"></span></a>Headers:</h4>
 
 <table>
 <thead><tr>
@@ -128,8 +129,8 @@
 <span class="p">}</span>
 </pre></div>
 
-<h5>
-<a name="response-codes--error-handling" class="anchor" href="#response-codes--error-handling"><span class="octicon octicon-link"></span></a>Response codes &amp; Error Handling</h5>
+<h4>
+<a name="response-codes--error-handling" class="anchor" href="#response-codes--error-handling"><span class="octicon octicon-link"></span></a>Response codes &amp; Error Handling</h4>
 
 <blockquote>
 <p>The API will always return an HTTP status code 200 however there may be errors. In the JSON response body, "error" will not be false. Example:</p>
@@ -144,7 +145,7 @@
 <span class="p">}</span>
 </pre></div>
 
-<p>Error codes:</p>
+<h4>Error codes:</h4>
 
 <ul>
 <li>
@@ -152,8 +153,9 @@
 <li>
 <code>401</code> Unauthorized - Likely that the credentials were incorrect</li>
 </ul><h2>
+<br />
 <a name="post-locations" class="anchor" href="#post-locations"><span class="octicon octicon-link"></span></a>
-<code>POST</code> /locations</h2>
+POST /locations</h2>
 
 <blockquote>
 <p><strong>NOTE: This API endpoint is in progress and therefore the documentation is not complete. Analytics is also currently not supported</strong> This feature  returns a list of nearby Starbucks locations stored in a MongoDB database (not included in API). Set the following environment variables in index.php: </p>
@@ -162,7 +164,7 @@
 <div class="highlight highlight-php"><pre><span class="nv">$_ENV</span><span class="p">[</span><span class="s1">'LOCATIONS'</span><span class="p">]</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
 <span class="nv">$_ENV</span><span class="p">[</span><span class="s1">'MONGOHQ_URL'</span><span class="p">]</span> <span class="o">=</span> <span class="nx">mongodb</span><span class="o">://</span><span class="nx">user</span><span class="o">:</span><span class="nx">pass</span><span class="o">@</span><span class="nx">server</span><span class="o">.</span><span class="nx">mongohq</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">db_name</span><span class="p">;</span>
 </pre></div>
-
+<br />
 <h2>
 <a name="google-analytics" class="anchor" href="#google-analytics"><span class="octicon octicon-link"></span></a>Google Analytics</h2>
 
