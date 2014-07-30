@@ -12,7 +12,7 @@ _Login information (username and password) is not stored and the API should only
 - Slim PHP Microframework
 - Google Analytics **(optional for usage statistics)**
 - MongoDB **(optional for geolocation)** 
-- Request body and Response body use JSON
+- Request body and response body use JSON
 
 #### API Endpoints:
 - **<code>POST</code> /account**
