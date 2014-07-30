@@ -85,4 +85,18 @@ $_ENV['MONGOHQ_URL'] = mongodb://user:pass@server.mongohq.com/db_name;
 $_ENV['ANALYTICS'] = true;
 $_ENV['TRACKING_ID'] = "UA-XXXXXXXX-X";
 ```
-
+Currently supports the following parameters:
+| Name  | Description | Details |
+| ------------- | ------------- | ------------- |
+| username  | Starbucks username or password  | required |
+| password  | Starbucks password  | required | 
+"v=".urlencode($v).
+    "&tid=".urlencode($tid).
+    "&cid=".urlencode($cid).
+    "&t=".urlencode($t).
+    "&ec=".urlencode($ec).
+    "&ea=".urlencode($ea).
+    "&ev=".urlencode($ev).
+    "&uip=".urlencode($uip).
+    "&ua=".urlencode($ua).
+    "&av=".urlencode($av);
