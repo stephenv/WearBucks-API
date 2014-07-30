@@ -7,17 +7,17 @@ This API is based off [Starbucks class](https://github.com/Neal/php-starbucks) b
 
 _Login information (username and password) is not stored and the API should only be used over SSL/TSL_
 
-#### Dependencies:
+##### Dependencies:
 - Slim PHP Microframework
 - Google Analytics **(optional for usage statistics)**
 - MongoDB **(optional for geolocation)** 
 - Request body and response body use JSON
 
-#### API Endpoints:
+##### API Endpoints:
 - **<code>POST</code> /account**
 - **<code>POST</code> /locations (In progress)**
 
-#### Installation instructions:
+##### Installation instructions:
 - Just deploy and modify the optional environment variables in "index.php" as necessary.
 - Although the API is small, it was put together very quickly. It would be beneficial to look over the "Response codes & Error Handling" section as the API will always return HTTP 200 even when there are errors. Again, the "/locations" endpoint is currently in development and is not active.
 
