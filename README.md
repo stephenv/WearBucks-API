@@ -66,26 +66,19 @@ Error codes:
 
 
 ## <code>POST</code> /locations
->**<code>Note:</code> This API endpoint is in progress and therefore the documentation is not complete. Analytics is also currently not supported**
-This feature  returns a list of nearby Starbucks locations stored in a MongoDB database (not included in API) 
+>**NOTE: This API endpoint is in progress and therefore the documentation is not complete. Analytics is also currently not supported** This feature  returns a list of nearby Starbucks locations stored in a MongoDB database (not included in API). Set the following environment variables in index.php: 
 
-set the following environment variables in index.php: 
 ```php
 $_ENV['LOCATIONS'] = true;
 $_ENV['MONGOHQ_URL'] = mongodb://user:pass@server.mongohq.com/db_name;
 ```
 
-/locations
-Content-Type: application/json
-
-Example JSON body:
-```json
-{
-  "latitude": 00.0000000,
-  "longitude": -00.0000000
-}
-```
 
 ## Google Analytics 
-Google analytics can be enabled and is tracked using "Measurement Protocol". Ensure "Universal Analytics" is enabled on the property and use the provided tracking ID "UA-XXXX-XX"
+>Google analytics can be enabled and is tracked using "Measurement Protocol". Ensure "Universal Analytics" is enabled on the property and use the provided tracking ID "UA-XXXX-XX".Set the following environment variables in index.php: 
+
+```php
+$_ENV['ANALYTICS'] = true;
+$_ENV['TRACKING_ID'] = "UA-XXXXXXXX-X";
+```
 
