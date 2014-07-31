@@ -3,7 +3,8 @@
 require 'lib/includes.php';
 require 'lib/class.Starbucks.php';
 
-$_ENV['APP_NAME'] = "WearBucks";
+//Application name (used for Google Analytics)
+$_ENV['APP_NAME'] = "AppName";
 // Maintenance mode
 $_ENV['MAINTENANCE_MODE'] = false;
 // Google Analytics
