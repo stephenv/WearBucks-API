@@ -1,7 +1,7 @@
 WearBucks API
 =============
 
-WearBucks API is an open-source RESTful HTTP API for retrieving Starbucks user information. This is the API used by **WearBucks (Pay for Starbucks)** Android application on Google Play. 
+WearBucks API is an open-source RESTful HTTP API for retrieving Starbucks user information. This is the API used by **[WearBucks (Pay for Starbucks)](http://play.google.com/apps/testing/com.veshstudios.wearbucksfull)** Android application on Google Play. 
 
 This API is based off [Starbucks class](https://github.com/Neal/php-starbucks) by [Neil](https://github.com/Neal). 
 
